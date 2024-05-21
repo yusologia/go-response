@@ -37,6 +37,8 @@ func (handler Handler) Testing(w http.ResponseWriter, r *http.Request) {
 		CurrentPage: 1,
 		PerPage:     2,
 		TotalPage:   3,
+		NextPage:    2,
+		PrevPage:    1,
 	}
 
 	// Success response
@@ -160,7 +162,9 @@ func errValidation() {
     "count": 6,
     "currentPage": 1,
     "perPage": 2,
-    "totalPage": 3
+    "totalPage": 3,
+    "nextPage": 3,
+    "prevPage": 3
   }
 }
 ```
