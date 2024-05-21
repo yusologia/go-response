@@ -163,8 +163,8 @@ func errValidation() {
     "currentPage": 1,
     "perPage": 2,
     "totalPage": 3,
-    "nextPage": 3,
-    "prevPage": 3
+    "nextPage": 2,
+    "prevPage": 1
   }
 }
 ```
