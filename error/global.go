@@ -6,7 +6,7 @@ import (
 )
 
 func ErrLogiaUnauthenticated(internalMsg string) {
-	logiares.Error(http.StatusUnauthorized, "Unauthenticated.", internalMsg, nil)
+	logiares.Error(http.StatusUnauthorized, "Your token may have expired. Please re-login!!", internalMsg, nil)
 }
 
 func ErrLogiaBadRequest(internalMsg string) {
@@ -14,7 +14,7 @@ func ErrLogiaBadRequest(internalMsg string) {
 }
 
 func ErrLogiaPayloadVeryLarge(internalMsg string) {
-	logiares.Error(http.StatusRequestEntityTooLarge, "Your payload very large!", internalMsg, nil)
+	logiares.Error(http.StatusRequestEntityTooLarge, "Your request entity very large!", internalMsg, nil)
 }
 
 func ErrLogiaValidation(attributes []interface{}) {

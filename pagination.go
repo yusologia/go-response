@@ -5,6 +5,8 @@ type Pagination struct {
 	CurrentPage any
 	PerPage     int
 	TotalPage   int
+	NextPage    int
+	PrevPage    int
 }
 
 func (p *Pagination) ParsePagination() interface{} {
@@ -13,5 +15,7 @@ func (p *Pagination) ParsePagination() interface{} {
 		"currentPage": p.CurrentPage,
 		"perPage":     p.PerPage,
 		"totalPage":   p.TotalPage,
+		"nextPage":    p.TotalPage,
+		"prevPage":    p.TotalPage,
 	}
 }
